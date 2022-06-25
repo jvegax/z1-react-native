@@ -9,10 +9,19 @@
  */
 
 import React from 'react';
-import Main from './src/Main';
+import Main from './src';
+
+import {apolloClient} from './src/apollo/apolloConfiguration';
+import {ApolloProvider} from '@apollo/client';
+import {StatusBar} from 'react-native';
 
 const App = () => {
-  return <Main />;
+  return (
+    <ApolloProvider client={apolloClient}>
+      <StatusBar barStyle="light-content" backgroundColor="#320D51" />
+      <Main />
+    </ApolloProvider>
+  );
 };
 
 export default App;
