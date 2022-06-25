@@ -1,6 +1,6 @@
 import {View} from 'react-native';
 import {useQuery} from '@apollo/client';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import globalStyles from '../styles/global';
 import Spinner from '../components/Spinner/Spinner';
@@ -18,6 +18,12 @@ const HomeScreen = () => {
   function filterByCategory(name) {
     setArticles(CategoryService.filterByCategoryName(name, data.items));
   }
+
+  useEffect(() => {
+    if (!loading && !error && data) {
+      setArticles(data.items);
+    }
+  }, [data, loading, error]);
 
   if (loading) {
     return <Spinner />;
