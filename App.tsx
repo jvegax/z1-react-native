@@ -7,12 +7,12 @@
  *
  * @format
  */
-
+import 'react-native-gesture-handler';
 import React from 'react';
-import Main from './src/Main';
+import AppZ1 from './src';
 
 const App = () => {
-  return <Main />;
+  return <AppZ1 />;
 };
 
 export default App;
