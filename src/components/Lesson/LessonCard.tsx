@@ -1,11 +1,7 @@
 import {Text, View, Image} from 'react-native';
 import React from 'react';
 import globalStyles from '../../styles/global';
-import {Lesson} from '../../screens/types';
-
-interface LessonCardProps {
-  lesson: Lesson;
-}
+import {LessonCardProps} from './types';
 
 const LessonCard = ({lesson}: LessonCardProps) => {
   return (
@@ -17,9 +13,7 @@ const LessonCard = ({lesson}: LessonCardProps) => {
         }}
       />
       <View style={globalStyles.lessonCardContent}>
-        <Text style={globalStyles.lessonCardCategory}>
-          {lesson.category.title}
-        </Text>
+        <Text style={globalStyles.lessonCardCategory}>{lesson.category}</Text>
         <Text style={globalStyles.lessonCardTitle}>{lesson.title}</Text>
         <View style={globalStyles.authorContainer}>
           <Text style={globalStyles.lessonCardAuthor}>{lesson.author}</Text>

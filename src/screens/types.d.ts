@@ -1,12 +1,10 @@
-export interface Lesson {
-  id: string;
-  title: string;
-  author?: string;
-  image: string;
-  category: {id: string; title: string};
-  content: string;
-}
+import {Lesson} from '../components/Lesson/types';
 
 export interface HomeState {
   lessons: Array<Lesson>;
+  favourites: Array<Lesson>;
+}
+
+export interface DetailsScreenProps {
+  route: any;
 }
