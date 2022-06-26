@@ -7,21 +7,12 @@
  *
  * @format
  */
-
+import 'react-native-gesture-handler';
 import React from 'react';
-import Main from './src';
-
-import {apolloClient} from './src/apollo/apolloConfiguration';
-import {ApolloProvider} from '@apollo/client';
-import {StatusBar} from 'react-native';
+import AppZ1 from './src';
 
 const App = () => {
-  return (
-    <ApolloProvider client={apolloClient}>
-      <StatusBar barStyle="light-content" backgroundColor="#320D51" />
-      <Main />
-    </ApolloProvider>
-  );
+  return <AppZ1 />;
 };
 
 export default App;
