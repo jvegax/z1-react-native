@@ -6,10 +6,10 @@ const globalStyles = StyleSheet.create({
     backgroundColor: '#320D51',
     padding: 20,
   },
-  reviewsContainer: {
+  lessonContainer: {
     paddingTop: 10,
     paddingBot: 10,
-    marginBottom: 50,
+    marginBottom: 100,
   },
 
   // Category menu
@@ -32,8 +32,8 @@ const globalStyles = StyleSheet.create({
     color: '#fff',
   },
 
-  // Review cards
-  reviewCardContainer: {
+  // lesson cards
+  lessonCardContainer: {
     flex: 1,
     flexDirection: 'row',
     backgroundColor: '#613070',
@@ -43,25 +43,25 @@ const globalStyles = StyleSheet.create({
     padding: 7,
     borderRadius: 10,
   },
-  reviewCardImage: {
+  lessonCardImage: {
     width: '30%',
     height: '100%',
     borderRadius: 10,
   },
-  reviewCardContent: {
+  lessonCardContent: {
     flex: 1,
     padding: 0,
     marginLeft: 10,
     marginBottom: 0,
   },
-  reviewCardCategory: {
+  lessonCardCategory: {
     color: '#F7DC6F',
     fontSize: 10,
     fontWeight: 'bold',
     textTransform: 'uppercase',
     letterSpacing: 1,
   },
-  reviewCardTitle: {
+  lessonCardTitle: {
     color: '#fff',
     fontSize: 22,
     fontWeight: 'bold',
@@ -71,39 +71,39 @@ const globalStyles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end',
   },
-  reviewCardAuthor: {
+  lessonCardAuthor: {
     color: '#D2C5B6',
     fontSize: 10,
     fontWeight: 'bold',
     letterSpacing: 1,
   },
 
-  // Review details containers
-  reviewDetailsContainer: {
+  // lesson details containers
+  lessonDetailsContainer: {
     flex: 1,
     flexDirection: 'column',
   },
-  reviewDetailsInfoContainer: {
+  lessonDetailsInfoContainer: {
     padding: 10,
   },
-  reviewDetailsImageContainer: {
+  lessonDetailsImageContainer: {
     flex: 1,
     borderRadius: 20,
   },
-  reviewDetailsContentContainer: {
+  lessonDetailsContentContainer: {
     flex: 1,
     padding: 10,
     marginTop: 10,
   },
 
-  // Review details items
-  reviewDetailsTitle: {
+  // lesson details items
+  lessonDetailsTitle: {
     fontSize: 36,
     fontWeight: 'bold',
     letterSpacing: 1,
     color: '#fff',
   },
-  reviewDetailsCategory: {
+  lessonDetailsCategory: {
     color: '#F7DC6F',
     fontSize: 12,
     fontWeight: 'bold',
@@ -111,18 +111,18 @@ const globalStyles = StyleSheet.create({
     letterSpacing: 1,
     marginBottom: 10,
   },
-  reviewDetailsAuthor: {
+  lessonDetailsAuthor: {
     color: '#D2C5B6',
     alignSelf: 'baseline',
     fontSize: 16,
     fontWeight: 'bold',
     letterSpacing: 1,
   },
-  reviewDetailsCardImage: {
+  lessonDetailsCardImage: {
     width: '30%',
     height: '100%',
   },
-  reviewDetailsDescriptionText: {
+  lessonDetailsDescriptionText: {
     fontSize: 18,
     color: '#E2ECEC',
     letterSpacing: 1,

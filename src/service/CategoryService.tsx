@@ -1,8 +1,13 @@
-export const filterByCategoryName = (name, items) => {
+import {Lesson} from '../screens/types';
+
+export const filterByCategoryName = (
+  name: String,
+  lessons: Array<Lesson>,
+): Array<Lesson> => {
   if (name === 'All') {
-    return items;
+    return lessons;
   }
-  return items.filter(i => i.category.title === name);
+  return lessons.filter(lesson => lesson.category.title === name);
 };
 
 export const getAllCategories = () => {

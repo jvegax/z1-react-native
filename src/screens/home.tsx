@@ -6,29 +6,40 @@ import globalStyles from '../styles/global';
 import Spinner from '../components/Spinner/Spinner';
 import Error from '../components/Error/Error';
 import CategoryMenu from '../components/Category/CategoryMenu';
-import ArticleList from '../components/Article/ArticleList';
+import ArticleList from '../components/Lesson/LessonList';
 
-import * as queryRepository from '../repository/ArticleRepository';
+import * as queryRepository from '../repository/lessonQueryRepository';
 import * as CategoryService from '../service/CategoryService';
+import {HomeState} from './types';
+import {normalizeLessonsFromAPI} from '../utils/lessonUtils';
 
 const HomeScreen = () => {
-  const {loading, error, data} = useQuery(queryRepository.GET_ARTICLES);
-  const [articles, setArticles] = useState([]);
+  const {loading, error, data} = useQuery(queryRepository.GET_LESSONS);
+  const [lessons, setLessons] = useState<HomeState['lessons']>([]);
 
-  function filterByCategory(name) {
-    setArticles(CategoryService.filterByCategoryName(name, data.items));
-  }
-
+  // Load initial state
   useEffect(() => {
     if (!loading && !error && data) {
-      setArticles(data.items);
+      setLessons(normalizeLessonsFromAPI(data.items));
     }
   }, [data, loading, error]);
 
+  // Filter lessons by category name
+  const filterLesson = (name: String): void => {
+    setLessons(
+      CategoryService.filterByCategoryName(
+        name,
+        normalizeLessonsFromAPI(data.items),
+      ),
+    );
+  };
+
+  // Spinner when loading...
   if (loading) {
     return <Spinner />;
   }
 
+  // Error messages
   if (error) {
     return <Error>{error}</Error>;
   }
@@ -37,10 +48,10 @@ const HomeScreen = () => {
     <View style={globalStyles.container}>
       <View>
         <View style={globalStyles.categoryMenuContainer}>
-          <CategoryMenu filterByCategory={filterByCategory} />
+          <CategoryMenu filterLesson={filterLesson} />
         </View>
-        <View style={globalStyles.reviewsContainer}>
-          <ArticleList articles={articles} />
+        <View style={globalStyles.lessonContainer}>
+          <ArticleList lessons={lessons} />
         </View>
       </View>
     </View>

@@ -1,10 +1,12 @@
 import {TouchableOpacity, Text} from 'react-native';
 import React from 'react';
-import globalStyles from '../../styles/global';
 
-const Category = ({category, filterByCategory}) => {
+import globalStyles from '../../styles/global';
+import {CategoryProps} from './types';
+
+const Category = ({category, filterLesson}: CategoryProps) => {
   const handleChange = () => {
-    filterByCategory(category);
+    filterLesson(category);
   };
   return (
     <TouchableOpacity onPress={handleChange}>
