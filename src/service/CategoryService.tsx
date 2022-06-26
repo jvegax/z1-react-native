@@ -1,13 +1,13 @@
-import {Lesson} from '../screens/types';
+import {Lesson} from '../components/Lesson/types';
 
 export const filterByCategoryName = (
-  name: String,
+  name: string,
   lessons: Array<Lesson>,
 ): Array<Lesson> => {
   if (name === 'All') {
     return lessons;
   }
-  return lessons.filter(lesson => lesson.category.title === name);
+  return lessons.filter(lesson => lesson.category === name);
 };
 
 export const getAllCategories = () => {

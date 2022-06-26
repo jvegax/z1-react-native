@@ -1,8 +1,8 @@
 export interface CategoryProps {
   category: string;
-  filterLesson: (name: String) => void;
+  filterLesson: (name: string) => void;
 }
 
 export interface CategoryMenuProps {
-  filterLesson: (name: String) => void;
+  filterLesson: (name: string) => void;
 }

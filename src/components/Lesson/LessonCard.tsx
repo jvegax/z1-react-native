@@ -13,9 +13,7 @@ const LessonCard = ({lesson}: LessonCardProps) => {
         }}
       />
       <View style={globalStyles.lessonCardContent}>
-        <Text style={globalStyles.lessonCardCategory}>
-          {lesson.category.title}
-        </Text>
+        <Text style={globalStyles.lessonCardCategory}>{lesson.category}</Text>
         <Text style={globalStyles.lessonCardTitle}>{lesson.title}</Text>
         <View style={globalStyles.authorContainer}>
           <Text style={globalStyles.lessonCardAuthor}>{lesson.author}</Text>

@@ -4,3 +4,7 @@ export interface HomeState {
   lessons: Array<Lesson>;
   favourites: Array<Lesson>;
 }
+
+export interface DetailsScreenProps {
+  route: any;
+}

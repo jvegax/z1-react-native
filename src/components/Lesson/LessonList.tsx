@@ -3,12 +3,12 @@ import React from 'react';
 import LessonCard from './LessonCard';
 import {LessonListProps} from './types';
 
-const ArticleList = ({lessons}: LessonListProps) => {
+const LessonList = ({lessons, navigation}: LessonListProps) => {
   return (
     <FlatList
       data={lessons}
       renderItem={({item}) => (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Details', item)}>
           <LessonCard lesson={item} />
         </TouchableOpacity>
       )}
@@ -16,4 +16,4 @@ const ArticleList = ({lessons}: LessonListProps) => {
   );
 };
 
-export default ArticleList;
+export default LessonList;

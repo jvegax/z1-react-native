@@ -3,14 +3,19 @@ export interface Lesson {
   title: string;
   author?: string;
   image: string;
-  category: {id: string; title: string};
+  category: {title: string};
   content: string;
 }
 
 export interface LessonListProps {
   lessons: Array<Lesson>;
+  navigation: any;
 }
 
 export interface LessonCardProps {
+  lesson: Lesson;
+}
+
+export interface LessonDetailsProps {
   lesson: Lesson;
 }
