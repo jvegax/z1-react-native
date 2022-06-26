@@ -1,11 +1,7 @@
 import {Text, View, Image} from 'react-native';
 import React from 'react';
 import globalStyles from '../../styles/global';
-import {Lesson} from '../../screens/types';
-
-interface LessonCardProps {
-  lesson: Lesson;
-}
+import {LessonCardProps} from './types';
 
 const LessonCard = ({lesson}: LessonCardProps) => {
   return (

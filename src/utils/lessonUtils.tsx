@@ -1,4 +1,4 @@
-import {Lesson} from '../screens/types';
+import {Lesson} from '../components/Lesson/types';
 
 export const normalizeLessonsFromAPI = (response: any): Array<Lesson> => {
   return response.map((lesson: any): Lesson => {

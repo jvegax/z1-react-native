@@ -1,11 +1,7 @@
 import {TouchableOpacity, FlatList} from 'react-native';
 import React from 'react';
 import LessonCard from './LessonCard';
-import {Lesson} from '../../screens/types';
-
-interface LessonListProps {
-  lessons: Array<Lesson>;
-}
+import {LessonListProps} from './types';
 
 const ArticleList = ({lessons}: LessonListProps) => {
   return (
