@@ -1,8 +1,8 @@
-import {TouchableOpacity, Text} from 'react-native';
+import {TouchableOpacity} from 'react-native';
 import React from 'react';
 
-import globalStyles from '../../styles/global';
 import {CategoryProps} from './types';
+import {StyledCategoryText} from '../../styled-components/category';
 
 const Category = ({category, filterLesson}: CategoryProps) => {
   const handleChange = () => {
@@ -10,7 +10,7 @@ const Category = ({category, filterLesson}: CategoryProps) => {
   };
   return (
     <TouchableOpacity onPress={handleChange}>
-      <Text style={globalStyles.categoryMenuText}>{category}</Text>
+      <StyledCategoryText>{category}</StyledCategoryText>
     </TouchableOpacity>
   );
 };
