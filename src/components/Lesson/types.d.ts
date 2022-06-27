@@ -12,10 +12,6 @@ export interface LessonListProps {
   navigation: any;
 }
 
-export interface LessonCardProps {
-  lesson: Lesson;
-}
-
-export interface LessonDetailsProps {
+export interface LessonProps {
   lesson: Lesson;
 }

@@ -1,15 +1,11 @@
 import {Text, View} from 'react-native';
 import React from 'react';
-import {ApolloError} from '@apollo/client';
-
-interface ErrorProps {
-  children: ApolloError | undefined;
-}
+import {ErrorProps} from './types';
 
 const Error = ({children}: ErrorProps) => {
   return (
     <View>
-      <Text>Ops! Something went wrong: {children}</Text>
+      <Text>Ops! Something went wrong: {children?.message}</Text>
     </View>
   );
 };

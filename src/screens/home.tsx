@@ -7,14 +7,14 @@ import Spinner from '../components/Spinner/Spinner';
 import Error from '../components/Error/Error';
 import CategoryMenu from '../components/Category/CategoryMenu';
 
-import * as queryRepository from '../repository/lessonQueryRepository';
+import * as lessonRepo from '../repository/lessonQueryRepository';
 import * as CategoryService from '../service/CategoryService';
 import {HomeState} from './types';
 import {normalizeLessonsFromAPI} from '../utils/lessonUtils';
 import LessonList from '../components/Lesson/LessonList';
 
 const HomeScreen = ({navigation}: any) => {
-  const {loading, error, data} = useQuery(queryRepository.GET_LESSONS);
+  const {loading, error, data} = useQuery(lessonRepo.GET_LESSONS);
   const [lessons, setLessons] = useState<HomeState['lessons']>([]);
 
   // Load initial state

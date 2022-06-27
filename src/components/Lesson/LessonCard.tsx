@@ -1,25 +1,32 @@
-import {Text, View, Image} from 'react-native';
 import React from 'react';
-import globalStyles from '../../styles/global';
-import {LessonCardProps} from './types';
 
-const LessonCard = ({lesson}: LessonCardProps) => {
+import {LessonProps} from './types';
+import {
+  AuthorContainer,
+  LessonCardAuthor,
+  LessonCardCategory,
+  LessonCardContainer,
+  LessonCardContent,
+  LessonCardImage,
+  LessonCardTitle,
+} from '../../styled-components/lesson';
+
+const LessonCard = ({lesson}: LessonProps) => {
   return (
-    <View style={globalStyles.lessonCardContainer}>
-      <Image
-        style={globalStyles.lessonCardImage}
+    <LessonCardContainer>
+      <LessonCardImage
         source={{
           uri: lesson.image,
         }}
       />
-      <View style={globalStyles.lessonCardContent}>
-        <Text style={globalStyles.lessonCardCategory}>{lesson.category}</Text>
-        <Text style={globalStyles.lessonCardTitle}>{lesson.title}</Text>
-        <View style={globalStyles.authorContainer}>
-          <Text style={globalStyles.lessonCardAuthor}>{lesson.author}</Text>
-        </View>
-      </View>
-    </View>
+      <LessonCardContent>
+        <LessonCardCategory>{lesson.category}</LessonCardCategory>
+        <LessonCardTitle>{lesson.title}</LessonCardTitle>
+        <AuthorContainer>
+          <LessonCardAuthor>{lesson.author}</LessonCardAuthor>
+        </AuthorContainer>
+      </LessonCardContent>
+    </LessonCardContainer>
   );
 };
 

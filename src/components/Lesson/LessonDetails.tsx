@@ -2,9 +2,9 @@ import {View, Text, ScrollView, Image} from 'react-native';
 import React from 'react';
 
 import globalStyles from '../../styles/global';
-import {LessonDetailsProps} from './types';
+import {LessonProps} from './types';
 
-const LessonDetails = ({lesson}: LessonDetailsProps) => {
+const LessonDetails = ({lesson}: LessonProps) => {
   return (
     <View style={globalStyles.container}>
       <View style={globalStyles.lessonDetailsContainer}>
