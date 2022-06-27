@@ -3,7 +3,8 @@ import styled from 'styled-components/native';
 export const LessonContainer = styled.View`
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-bottom: 40%;
+  margin-bottom: 35%;
+  border-radius: 20px;
 `;
 
 export const LessonCardContainer = styled.View`
