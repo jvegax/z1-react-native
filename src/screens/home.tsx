@@ -1,8 +1,6 @@
 import {View} from 'react-native';
 import {useQuery} from '@apollo/client';
 import React, {useEffect, useState} from 'react';
-
-import globalStyles from '../styles/global';
 import Spinner from '../components/Spinner/Spinner';
 import Error from '../components/Error/Error';
 import CategoryMenu from '../components/Category/CategoryMenu';
@@ -12,6 +10,9 @@ import * as CategoryService from '../service/CategoryService';
 import {HomeState} from './types';
 import {normalizeLessonsFromAPI} from '../utils/lessonUtils';
 import LessonList from '../components/Lesson/LessonList';
+import {MainContainer} from '../styled-components/shared';
+import {LessonContainer} from '../styled-components/lesson';
+import {CategoryMenuContainer} from '../styled-components/category';
 
 const HomeScreen = ({navigation}: any) => {
   const {loading, error, data} = useQuery(lessonRepo.GET_LESSONS);
@@ -45,16 +46,16 @@ const HomeScreen = ({navigation}: any) => {
   }
 
   return (
-    <View style={globalStyles.container}>
+    <MainContainer>
       <View>
-        <View style={globalStyles.categoryMenuContainer}>
+        <CategoryMenuContainer>
           <CategoryMenu filterLesson={filterLesson} />
-        </View>
-        <View style={globalStyles.lessonContainer}>
+        </CategoryMenuContainer>
+        <LessonContainer>
           <LessonList lessons={lessons} navigation={navigation} />
-        </View>
+        </LessonContainer>
       </View>
-    </View>
+    </MainContainer>
   );
 };
 

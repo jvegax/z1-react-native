@@ -1,5 +1,9 @@
 import styled from 'styled-components/native';
 
+export const CategoryMenuContainer = styled.View`
+  height: 50px;
+`;
+
 export const StyledCategoryText = styled.Text`
   align-self: flex-start;
   color: #fff;
