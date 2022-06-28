@@ -1,23 +1,16 @@
+import {Category} from '../components/Category/enums';
 import {Lesson} from '../components/Lesson/types';
 
 export const filterByCategoryName = (
-  name: string,
+  categoryName: string,
   lessons: Array<Lesson>,
 ): Array<Lesson> => {
-  if (name === 'All') {
+  if (categoryName === Category.All) {
     return lessons;
   }
-  return lessons.filter(lesson => lesson.category === name);
+  return lessons.filter(lesson => lesson.category === categoryName);
 };
 
-export const getAllCategories = () => {
-  const categories = [
-    'All',
-    'Favourites ❤️',
-    'Harm Reduction',
-    'Integration',
-    'Mindfulness',
-    'Tripping',
-  ];
-  return categories;
+export const getAllCategories = (): string[] => {
+  return Object.values(Category).map(category => category);
 };

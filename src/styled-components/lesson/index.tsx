@@ -3,8 +3,13 @@ import styled from 'styled-components/native';
 export const LessonListContainer = styled.View`
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-bottom: 25%;
+  margin-bottom: 5%;
   border-radius: 20px;
+`;
+
+export const LessonFooterContainer = styled.View`
+  height: 10%;
+  background-color: #613070;
 `;
 
 export const LessonCardContainer = styled.View`

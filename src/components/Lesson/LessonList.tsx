@@ -1,5 +1,5 @@
 import {TouchableOpacity, FlatList} from 'react-native';
-import React from 'react';
+import React, {memo} from 'react';
 import LessonCard from './LessonCard';
 import {LessonListProps} from './types';
 
@@ -16,4 +16,4 @@ const LessonList = ({lessons, navigation}: LessonListProps) => {
   );
 };
 
-export default LessonList;
+export default memo(LessonList);

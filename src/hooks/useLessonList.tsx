@@ -18,6 +18,7 @@ const useLessonList = (): useLessonListProps => {
 
   return {
     lessons,
+    setLessons,
   };
 };
 
