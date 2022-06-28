@@ -11,6 +11,6 @@ export const StyledCategoryText = styled.Text`
   letter-spacing: 0.5px;
   font-weight: bold;
   background-color: #ad6ead;
-  border-radius: 10px;
+  border-radius: 15px;
   margin-right: 10px;
 `;

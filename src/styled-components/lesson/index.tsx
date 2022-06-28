@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 export const LessonListContainer = styled.View`
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-bottom: 35%;
+  margin-bottom: 25%;
   border-radius: 20px;
 `;
 
@@ -12,7 +12,7 @@ export const LessonCardContainer = styled.View`
   flex-direction: row;
   background-color: #613070;
   margin-top: 10px;
-  height: 120px;
+  height: 110px;
   padding: 7px;
   border-radius: 10px;
 `;
@@ -41,12 +41,13 @@ export const LessonCardCategory = styled.Text`
 export const LessonCardTitle = styled.Text`
   letter-spacing: 1px;
   color: #fff;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
+  margin-top: 5px;
 `;
 
 export const AuthorContainer = styled.View`
-  display: flex;
+  flex: 1;
   justify-content: flex-end;
 `;
 

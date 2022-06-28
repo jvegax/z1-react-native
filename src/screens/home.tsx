@@ -1,14 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import {View} from 'react-native';
 
 import {MainContainer} from '../styled-components/shared';
 import {LessonListContainer} from '../styled-components/lesson';
 import {CategoryMenuContainer} from '../styled-components/category';
+import {HomeProps, LessonState} from './types';
 import CategoryMenu from '../components/Category/CategoryMenu';
 import LessonList from '../components/Lesson/LessonList';
-import * as CategoryService from '../service/CategoryService';
 import useLessonList from '../hooks/useLessonList';
-import {HomeProps, LessonState} from './types';
+import * as CategoryService from '../service/CategoryService';
 
 const HomeScreen = ({navigation}: HomeProps) => {
   const {lessons} = useLessonList();
@@ -28,14 +27,12 @@ const HomeScreen = ({navigation}: HomeProps) => {
 
   return (
     <MainContainer>
-      <View>
-        <CategoryMenuContainer>
-          <CategoryMenu filterLesson={filterLesson} />
-        </CategoryMenuContainer>
-        <LessonListContainer>
-          <LessonList lessons={filteredLessons} navigation={navigation} />
-        </LessonListContainer>
-      </View>
+      <CategoryMenuContainer>
+        <CategoryMenu filterLesson={filterLesson} />
+      </CategoryMenuContainer>
+      <LessonListContainer>
+        <LessonList lessons={filteredLessons} navigation={navigation} />
+      </LessonListContainer>
     </MainContainer>
   );
 };
