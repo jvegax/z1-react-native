@@ -7,11 +7,6 @@ export const LessonListContainer = styled.View`
   border-radius: 20px;
 `;
 
-export const LessonFooterContainer = styled.View`
-  height: 10%;
-  background-color: #613070;
-`;
-
 export const LessonCardContainer = styled.View`
   display: flex;
   flex-direction: row;
@@ -84,10 +79,11 @@ export const LessonDetailsContentContainer = styled.ScrollView`
 `;
 
 export const LessonDetailsTitle = styled.Text`
-  font-size: 36px;
+  font-size: 28px;
   font-weight: bold;
   letter-spacing: 1px;
   color: #fff;
+  margin-bottom: 5px;
 `;
 
 export const LessonDetailsCategory = styled.Text`
@@ -121,4 +117,51 @@ export const LessonDetailsDescriptionText = styled.Text`
   text-align: left;
   margin-bottom: 20px;
   opacity: 0.8;
+`;
+
+// Lesson player
+export const LessonPlayerContainer = styled.View`
+  display: flex;
+  flex-direction: row;
+  height: 10%;
+  background-color: #613070;
+`;
+
+export const LessonPlayerImage = styled.Image`
+  flex: 0.2;
+  width: 10px;
+  margin: 7px;
+  margin-left: 20px;
+  border-radius: 10px;
+`;
+
+export const LessonPlayerContent = styled.View`
+  display: flex;
+  flex: 1;
+`;
+
+export const LessonPlayerContentTitle = styled.Text`
+  flex: 1;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 5px;
+`;
+
+export const LessonPlayerContentProgress = styled.Text`
+  flex: 1;
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 5px;
+  margin-bottom: 8px;
+`;
+
+export const LessonPlayerSoundImageContainer = styled.View`
+  display: flex;
+  flex: 0.2;
+  padding: 5px;
+`;
+export const LessonPlayerSoundImage = styled.Image`
+  flex: 1;
+  margin: 8px;
 `;

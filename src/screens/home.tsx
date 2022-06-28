@@ -1,16 +1,14 @@
 import React, {useEffect, useState} from 'react';
 
 import {MainContainer} from '../styled-components/shared';
-import {
-  LessonFooterContainer,
-  LessonListContainer,
-} from '../styled-components/lesson';
+import {LessonListContainer} from '../styled-components/lesson';
 import {CategoryMenuContainer} from '../styled-components/category';
 import {HomeProps, LessonState} from './types';
 import CategoryMenu from '../components/Category/CategoryMenu';
 import LessonList from '../components/Lesson/LessonList';
 import useLessonList from '../hooks/useLessonList';
 import * as CategoryService from '../service/CategoryService';
+import LessonPlayer from '../components/Player/LessonPlayer';
 
 const HomeScreen = ({navigation}: HomeProps) => {
   const {lessons} = useLessonList();
@@ -38,7 +36,7 @@ const HomeScreen = ({navigation}: HomeProps) => {
           <LessonList lessons={filteredLessons} navigation={navigation} />
         </LessonListContainer>
       </MainContainer>
-      <LessonFooterContainer />
+      <LessonPlayer />
     </>
   );
 };

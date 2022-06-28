@@ -1,7 +1,8 @@
 import styled from 'styled-components/native';
 
 export const CategoryMenuContainer = styled.View`
-  height: 50px;
+  height: 10%;
+  padding: 5px;
 `;
 
 export const StyledCategoryText = styled.Text`
