@@ -18,7 +18,7 @@ const LessonDetails = ({lesson}: LessonProps) => {
       <LessonDetailsInfoContainer>
         <LessonDetailsCategory>{lesson.category}</LessonDetailsCategory>
         <LessonDetailsTitle>{lesson.title}</LessonDetailsTitle>
-        <LessonDetailsAuthor>{lesson.author}</LessonDetailsAuthor>
+        <LessonDetailsAuthor>{lesson?.author}</LessonDetailsAuthor>
       </LessonDetailsInfoContainer>
       <LessonDetailsCardImage
         source={{

@@ -1,7 +1,8 @@
 import styled from 'styled-components/native';
 
 export const CategoryMenuContainer = styled.View`
-  height: 50px;
+  height: 10%;
+  padding: 5px;
 `;
 
 export const StyledCategoryText = styled.Text`
@@ -11,6 +12,6 @@ export const StyledCategoryText = styled.Text`
   letter-spacing: 0.5px;
   font-weight: bold;
   background-color: #ad6ead;
-  border-radius: 10px;
+  border-radius: 15px;
   margin-right: 10px;
 `;
