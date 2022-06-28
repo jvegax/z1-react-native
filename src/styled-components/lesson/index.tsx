@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-export const LessonContainer = styled.View`
+export const LessonListContainer = styled.View`
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 35%;

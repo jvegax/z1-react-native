@@ -1,3 +1,5 @@
+import {NavigationProp, ParamListBase} from '@react-navigation/native';
+
 export interface Lesson {
   id: string;
   title: string;
@@ -9,7 +11,7 @@ export interface Lesson {
 
 export interface LessonListProps {
   lessons: Array<Lesson>;
-  navigation: any;
+  navigation: NavigationProp<ParamListBase>;
 }
 
 export interface LessonProps {
