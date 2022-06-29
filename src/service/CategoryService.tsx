@@ -11,6 +11,6 @@ export const filterByCategoryName = (
   return lessons.filter(lesson => lesson.category === categoryName);
 };
 
-export const getAllCategories = (): string[] => {
+export const getAllCategories = (): Category[] => {
   return Object.values(Category).map(category => category);
 };

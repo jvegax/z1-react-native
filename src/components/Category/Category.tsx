@@ -2,15 +2,33 @@ import {TouchableOpacity} from 'react-native';
 import React from 'react';
 
 import {CategoryProps} from './types';
-import {StyledCategoryText} from '../../styled-components/category';
+import {
+  StyledCategoryTextDefault,
+  StyledCategoryTextSelected,
+} from '../../styled-components/category';
 
-const Category = ({category, filterLesson}: CategoryProps) => {
+const Category = ({
+  selectedCategory,
+  category,
+  handleSelectCategory,
+}: CategoryProps) => {
   const handleChange = () => {
-    filterLesson(category);
+    handleSelectCategory(category);
   };
+
+  const renderCategoryStyle = () => {
+    if (selectedCategory === category) {
+      return (
+        <StyledCategoryTextSelected>{category}</StyledCategoryTextSelected>
+      );
+    } else {
+      return <StyledCategoryTextDefault>{category}</StyledCategoryTextDefault>;
+    }
+  };
+
   return (
     <TouchableOpacity onPress={handleChange}>
-      <StyledCategoryText>{category}</StyledCategoryText>
+      {renderCategoryStyle()}
     </TouchableOpacity>
   );
 };

@@ -6,7 +6,10 @@ import Category from './Category';
 import {CategoryMenuProps} from './types';
 import {CategoryMenuContainer} from '../../styled-components/category';
 
-const CategoryMenu = ({filterLesson}: CategoryMenuProps) => {
+const CategoryMenu = ({
+  selectedCategory,
+  handleSelectCategory,
+}: CategoryMenuProps) => {
   const categories = categoryService.getAllCategories();
 
   return (
@@ -15,7 +18,11 @@ const CategoryMenu = ({filterLesson}: CategoryMenuProps) => {
         horizontal={true}
         data={categories}
         renderItem={({item}) => (
-          <Category category={item} filterLesson={filterLesson} />
+          <Category
+            category={item}
+            selectedCategory={selectedCategory}
+            handleSelectCategory={handleSelectCategory}
+          />
         )}
       />
     </CategoryMenuContainer>
