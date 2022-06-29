@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
-import {MainContainer} from '../styled-components/shared';
-import {LessonListContainer} from '../styled-components/lesson';
-import {CategoryMenuContainer} from '../styled-components/category';
+import {HomeContainer} from '../styled-components/shared';
 import {HomeProps, LessonState} from './types';
 import CategoryMenu from '../components/Category/CategoryMenu';
 import LessonList from '../components/Lesson/LessonList';
@@ -27,17 +25,11 @@ const HomeScreen = ({navigation}: HomeProps) => {
   };
 
   return (
-    <>
-      <MainContainer>
-        <CategoryMenuContainer>
-          <CategoryMenu filterLesson={filterLesson} />
-        </CategoryMenuContainer>
-        <LessonListContainer>
-          <LessonList lessons={filteredLessons} navigation={navigation} />
-        </LessonListContainer>
-      </MainContainer>
+    <HomeContainer>
+      <CategoryMenu filterLesson={filterLesson} />
+      <LessonList lessons={filteredLessons} navigation={navigation} />
       <LessonPlayer />
-    </>
+    </HomeContainer>
   );
 };
 

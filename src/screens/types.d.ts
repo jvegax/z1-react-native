@@ -5,7 +5,7 @@ export interface LessonState {
   lessons: Array<Lesson>;
   filteredLessons: Array<Lesson>;
   favourites: Array<Lesson>;
-  selectedCategory: Category | null;
+  // selectedCategory: Category | null;
 }
 
 export interface DetailsScreenProps {

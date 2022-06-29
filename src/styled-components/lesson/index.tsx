@@ -1,10 +1,9 @@
 import styled from 'styled-components/native';
 
 export const LessonListContainer = styled.View`
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 5%;
-  border-radius: 20px;
+  flex: 7;
+  padding-left: 20px;
+  padding-right: 20px;
 `;
 
 export const LessonCardContainer = styled.View`
@@ -122,9 +121,13 @@ export const LessonDetailsDescriptionText = styled.Text`
 // Lesson player
 export const LessonPlayerContainer = styled.View`
   display: flex;
+  flex: 1;
   flex-direction: row;
-  height: 10%;
+  padding: 5px 0px 5px 0px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   background-color: #613070;
+  /* background-color: yellow; */
 `;
 
 export const LessonPlayerImage = styled.Image`
